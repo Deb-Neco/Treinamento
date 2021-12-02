@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #cccc;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+}
+
+form {
+  width: 100%;
+  background: #cccc;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.cabecalho {
+  background: #00008b;
+  width: 100%;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#patrimonio {
+  color: #fff;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#observacao {
+  color: #00008b;
+}
+
+.campos {
+  padding: 20px 10px;
+}
+
+.campo {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  width: 90%;
+  margin-bottom: 5px;
+}
+
+.campo label {
+  color: #00008b;
+  font-size: 16px;
+}
+
+.campo input {
+  height: 20px;
+  border-radius: 5px;
+}
+
+.campo input:active {
+  background: yellow;
+}
+
+#numero {
+  width: 80%;
+}
+
+#sigla {
+  width: 20%;
+}
+
+#nome {
+  width: 80%;
+}
+
+#fornecedor {
+  width: 70%;
+}
+
+#data {
+  width: 25%;
+}
+
+#operacao {
+  width: 50%;
+}
+
+.campo select {
+  border-radius: 5px;
+  height: 25px;
+}
+
+.radios {
+  display: flex;
+  flex-direction: row;
+}
+
+.radio input {
+  margin-bottom: 5px;
+}
+
+.radio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.cor {
+  color: blue !important;
+}
+
+.obervacao {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.observacao textarea {
+  border-radius: 5px;
+}
+
+#observacao {
+  margin-top: 30px;
+}
+
+.botao {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}

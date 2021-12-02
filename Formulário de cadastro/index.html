@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form method="GET" action="http://arquivo.devmedia.com.br/projeto/requisicao.php">
+      <fieldset>
+        <legend>Conta</legend>
+      <div>
+        <label>Email:</label>
+        <input type="email" name="email" minlength="6" maxlength="265" multiple required/>
+      </div>
+      <div>
+        <label>Senha:</label>
+        <input type="password" name="senha" required />
+      </div>
+      </fieldset>
+      <fieldset>
+        <legend>Dados Pessoais</legend>
+      <div>
+        <label>Nome:</label>
+        <input type="text" placeholder="Ex:Bruno" name="nome" required autocomplete />
+      </div>
+      <div>
+        <label>Telefone:</label>
+        <input type="text" placeholder="Ex:(11)99999-9999" />
+      </div>
+      <div>
+        <label>Sexo</label>
+        <input type="radio" value="Feminino" name="sexo" checked />
+        <label>Feminino</label>
+        <input type="radio" value="Masculino" name="sexo" />
+        <label>Masculino</label>
+      </div>
+      <div>
+        <label>Data de Nascimento</label>
+        <input type="date" name="data de nascimento" />
+      </div>
+      <div>
+        <label>Foto de perfil</label>
+        <input type="file" accept="image/*" name="foto" />
+      </div>
+    </fieldset>
+    <fieldset>
+    <legend>Endereço</legend>
+      <div>
+        <label>Rua:</label>
+        <input type="text" name="rua" />
+      </div>
+      <div>
+        <label>Número</label>
+        <input type="number" min="1" max="9999" name="número casa"/>
+      </div>
+      <div>
+        <label>Complemento:</label>
+        <input type="text"  name="complemento endereço" />
+        <label> Não </label> 
+        <input type="checkbox"/>
+      </div>
+      <div>
+        <label>Cidade</label>
+        <input type="text" name="cidade" />
+      </div>
+      </div>
+      <div>
+        <label>Estado</label>
+        <select name="endereço_estado">
+          <option value= "AC"> ACRE</option>
+          <option value= "AL">ALAGOAS</option>
+          <option value= "AP">AMAPÁ</option>
+          <option value= "AM">AMAZONAS</option>
+          <option value= "BA">BAHIA</option>
+          <option value= "CE">CEARÁ</option>
+          <option value= "DF">DISTRITO FEDERAL</option>
+          <option value= "ES">ESPIRITO SANTO</option>
+          <option value= "GO">GOIÁS</option>
+          <option value= "MA">MARANHÃO</option>
+          <option value= "MT">MATO GROSSO</option>
+          <option value= "MS">MATO GROSSO DO SUL</option>
+          <option value= "MG">MINAS GERAIS</option>
+          <option value= "PA">PARÁ</option>
+          <option value= "PB">PARAÍBA</option>
+          <option value= "PR">PARANÁ</option>
+          <option value= "PE">PERNAMBUCO</option>
+          <option value= "PI">PIAUÍ</option>
+          <option value= "RJ">RIO DE JANEIRO</option>
+          <option value= "RN">RIO GRANDE DO NORTE</option>
+          <option value= "RS">RIO GRANDE DO SUL</option>
+          <option value= "RO">RONDÔNIA</option>
+          <option value= "RR">RORAIMA</option>
+          <option value= "SC">SANTA CATARINA</option>
+          <option value= "SP">SÃO PAULO</option>
+          <option value= "SE">SERGIPE</option>
+          <option value= "TO">TOCANTINS</option>
+          <option value= "AL"></option>
+        </select>
+      </div>
+    </fieldset>
+    <fieldset>
+    <legend>Anuncio</legend>
+      <div>
+        <label>Como conheceu a Hello Pizza?</label>
+        <textarea name="como_conheceu_o_site" maxlength="256" placeholder="Conta pra gente, como conheceu nossa loja?" ></textarea>
+      </div>
+      <div>
+        <input type="checkbox" checked name="receber_anuncio" />
+        <label>Desejo receber ofertas por e-mail.</label>
+        </div>
+    </fieldset>
+    <input type="submit" value="Enviar">
+    </form>
+  </body>
+</html>

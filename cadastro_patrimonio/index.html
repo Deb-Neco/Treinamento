@@ -1,0 +1,160 @@
+<%@ LANGUAGE="VBSCRIPT" %> <%@ OPTION EXPLICIT %> <%
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Cadastro de Patrimônio</title>
+  </head>
+
+  <script language="javascript">
+    function incrementa_variavel_control_form(tipo) {
+      document.frmCadastro.control_form.value = tipo
+    }
+  </script>
+
+  <!--#include FILE = "CONFIG.ASP"-->
+
+  <!--#include FILE = "JavaScript.ASP"-->
+
+  <script type="text/javascript" language="javascript" src="SelGer.js"></script>
+  <body>
+    <form
+      name="frmCadastro"
+      id="frmCadastro"
+      method="post"
+      action="PatrimonioTreinamentoDEBORAH050Cad.Asp"
+    >
+      <input type="hidden" value="G" name="control_form" />
+      <div class="cabecalho">
+        <h1 id="patrimonio">Cadastro de Patrimonio - Treinamento</h1>
+        <a href="PatrimonioTreinamentoPesq050.asp" ></a>Pesquisar</label>
+      </div>
+
+      <div class="campos">
+        <div class="campo">
+          <label>Código Interno</label>
+        </div>
+
+        <div class="campo">
+          <label>Número</label>
+          <input type="number" id="numero" />
+        </div>
+
+        <div class="campo">
+          <label>Sigla</label>
+          <input type="text" id="sigla" />
+        </div>
+
+        <div class="campo">
+          <label>Nome</label>
+          <input type="text" id="nome" />
+        </div>
+
+        <div class="campo">
+          <label>Fornecedor</label>
+          <input type="text" id="fornecedor" />
+        </div>
+
+        <div class="campo">
+          <label>Data de Competência</label>
+          <input type="date" id="data" />
+        </div>
+
+        <div class="campo">
+          <label>Ponto de Operação</label>
+          <select name="select" id="operacao">
+            <option value="valor1">Valor 1</option>
+            <option value="valor2">Valor 2</option>
+            <option value="valor3">Valor 3</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label>Tipo Patrimônio</label>
+          <div class="radios">
+            <div class="radio">
+              <input
+                type="radio"
+                id="ativo"
+                nome="Patrimonio"
+                value="tipo-patrimonio"
+              />
+              <label class="cor">Ativo</label>
+            </div>
+            <div class="radio">
+              <input
+                type="radio"
+                id="passivo"
+                nome="Patrimonio"
+                value="tipo-patrimonio"
+              />
+              <label class="cor">Passivo</label>
+            </div>
+            <div class="radio">
+              <input
+                type="radio"
+                id="vale"
+                nome="Patrimonio"
+                value="tipo-patrimonio"
+              />
+              <label class="cor">Vale</label>
+            </div>
+            <div class="radio">
+              <input
+                type="radio"
+                id="zerado"
+                nome="Patrimonio"
+                value="tipo-patrimonio"
+              />
+              <label class="cor">Zerado</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="campo" id="obsercoes">
+          <label id="observacao">Observação</label>
+
+          <div class="observacao">
+            <textarea
+              id="mensagem"
+              name="observacao"
+              rows="4"
+              cols="60"
+            ></textarea>
+            <span>255</span>
+          </div>
+        </div>
+        <div class="botao">
+          <input
+            type="submit"
+            name="gravar"
+            value="Gravar"
+            onclick="incrementa_variavel_control_form('G')"
+          />
+          <input
+            type="submit"
+            name="excluir"
+            value="Excluir"
+            onclick="incrementa_variavel_control_form('E')"
+          />
+          <input
+            type="submit"
+            name="limpar"
+            value="Limpar"
+            onclick="incrementa_variavel_control_form('L')"
+          />
+          <input
+            type="submit"
+            name="Voltar"
+            value="Voltar"
+            onclick="incrementa_variavel_control_form('V')"
+          />
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
+%>
